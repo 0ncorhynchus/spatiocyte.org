@@ -1,0 +1,647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lte IE 8 ]>
+<html xmlns="http://www.w3.org/1999/xhtml" class="ie_lte_8">
+ <![endif]-->
+ <!--[if (gt IE 8)|!(IE) ]><!-->
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ <!--<![endif]-->
+  <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Spatiocyte -- open source particle simulator</title>
+   <meta name="description" content="Lattice-based stochastic particle simulator" />
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+   <script type="text/javascript" src="script/jquery.js"></script>
+   <link rel="stylesheet" href="css/remove.css">
+   <link rel="stylesheet" href="css/style.css">
+	 <meta name="viewport" content="width=device-width">
+   <script src="script/jquery-latest.min.js"></script>
+   <script src="script/unslider.min.js"></script>
+	</head>
+	<body>
+   <h1>
+    <object data="img/logo.svg" type="image/svg+xml"></object>
+    <a href="http://spatiocyte.org">Spatiocyte</a>
+    <span>
+     <span class="dash">—</span> A lattice-based particle simulator
+    </span>
+   </h1>
+   <div class="container">
+    <div id="content-slider">
+		 <div class="banner">
+			<ul>
+				<li style="background-image: url('img/slide1.jpg');"> </li>
+				<li style="background-image: url('img/slide2.jpg');"> </li>
+				<li style="background-image: url('img/slide3.jpg');"> </li>
+				<li style="background-image: url('img/slide4.jpg');"> </li>
+			</ul>
+		 </div>
+		</div>
+	 </div>
+   <div id="content">
+    <div id="toc">
+
+     <h2>Table of contents</h2>
+     <ul>
+      <li><a href="#about">About Spatiocyte</a>
+      </li>
+      <li><a href="#download">Download</a></li>
+      <li><a href="#quickstart">Quickstart guide</a></li>
+      <li><a href="#install">Installation</a></li>
+      <li><a href="#Links to other simulators">Links to other simulators</a></li>
+      <li><a href="#References">References</a></li>
+     </ul>
+    </div>
+
+    <div id="about">
+     <h2>About Spatiocyte</h2>		
+
+     <p>Bla bla bla
+     <div id="screenshots">
+      <h3>Screenshots</h3>		
+
+      <p> bla bla
+     </div>
+    </div>
+
+    <div id="disclaimer">
+     <h2>Disclaimer</h2>
+     <div class="articleBody">
+      <p>This program is free software; you can redistribute it and/or modify it 
+          under the terms of the <a href="LICENSE.txt">GNU General Public License</a> as published by the 
+         <a href="http://fsf.org/">Free Software Foundation</a>; either <a href="LICENSE.txt">version 3 of the License</a>, or (at your 
+         option) any later version.
+      </p>
+
+      <p>This program is distributed in the hope that it will be useful, but 
+         WITHOUT ANY WARRANTY; without even the implied warranty of 
+         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href="LICENSE.txt">GNU General Public License</a> for more details.
+      </p>
+      <p>Spatiocyte is written in <a href="http://python.org/">Python</a> and uses the 3rd-party packages <a href="http://numpy.scipy.org/">NumPy</a>, <a href="http://pypi.python.org/pypi/demjson">demjson</a> (<acronym title="JavaScript Object Notation">JSON<sup><a href="#definition_JSON">[6]</a></sup></acronym> library) and <a href="http://wxpython.org/">wxPython</a> (<acronym title="Graphical User Interface">GUI<sup><a href="#definition_GUI">[4]</a></sup></acronym> toolkit). It also makes extensive use of several <a href="http://argyllcms.com/">Argyll CMS</a> utilities. The build system to create standalone executables additionally uses <a href="http://pypi.python.org/pypi/setuptools">setuptools</a> and <a href="http://pypi.python.org/pypi/py2app">py2app</a> on Mac OS X or <a href="http://pypi.python.org/pypi/py2exe">py2exe</a> on Windows. All of these software packages are © by their respective authors.</p>
+     </div>
+    </div>
+
+    <div id="download">
+     <h2>Get Spatiocyte</h2>
+
+     <p><em>Please note: <a href="http://argyllcms.com">Argyll CMS</a> is a separate download.</em></p>
+
+     <ul>
+      <li>
+      <h3>For Linux</h3>
+      <div>
+       <p>Native packages for several distributions are available via <a href="https://build.opensuse.org">openSUSE Build Service</a>:</p>
+       <ul>
+	<li>
+	<span>CentOS 6</span>
+	<span><a href="http://dispcalgui.hoech.net/download/CentOS_CentOS-6/i386/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/CentOS_CentOS-6/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Debian 6 (Squeezy)</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Debian_6.0/i386/Spatiocyte.deb">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Debian_6.0/amd64/Spatiocyte.deb">x86_64</a></span>
+	</li>
+	<li>
+	<span>Fedora 14</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Fedora_14/i386/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Fedora_14/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Fedora 15</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Fedora_15/i386/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Fedora_15/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Fedora 16</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Fedora_16/i386/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Fedora_16/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Fedora 17</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Fedora_17/i386/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Fedora_17/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Mandriva 2009.1</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Mandriva_2009.1/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Mandriva_2009.1/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Mandriva 2010</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Mandriva_2010/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Mandriva_2010/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Mandriva 2010.1</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Mandriva_2010.1/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Mandriva_2010.1/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Mandriva 2011</span>
+	<span><a href="http://dispcalgui.hoech.net/download/Mandriva_2011/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/Mandriva_2011/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>openSUSE 11.3</span>
+	<span><a href="http://dispcalgui.hoech.net/download/openSUSE_11.3/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/openSUSE_11.3/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>openSUSE 11.4</span>
+	<span><a href="http://dispcalgui.hoech.net/download/openSUSE_11.4/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/openSUSE_11.4/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>openSUSE 12.1</span>
+	<span><a href="http://dispcalgui.hoech.net/download/openSUSE_12.1/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/openSUSE_12.1/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>openSUSE 12.2</span>
+	<span><a href="http://dispcalgui.hoech.net/download/openSUSE_12.2/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/openSUSE_12.2/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>openSUSE Factory</span>
+	<span><a href="http://dispcalgui.hoech.net/download/openSUSE_Factory/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/openSUSE_Factory/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>openSUSE Tumbleweed</span>
+	<span><a href="http://dispcalgui.hoech.net/download/openSUSE_Tumbleweed/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/openSUSE_Tumbleweed/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>RedHat RHEL 6</span>
+	<span><a href="http://dispcalgui.hoech.net/download/RedHat_RHEL-6/i386/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/RedHat_RHEL-6/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>SUSE Linux Enterprise 11</span>
+	<span><a href="http://dispcalgui.hoech.net/download/SLE_11/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/SLE_11/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>SUSE Linux Enterprise 11 SP1</span>
+	<span><a href="http://dispcalgui.hoech.net/download/SLE_11_SP1/i586/Spatiocyte.rpm">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/SLE_11_SP1/x86_64/Spatiocyte.rpm">x86_64</a></span>
+	</li>
+	<li>
+	<span>Ubuntu 10.10 (Maverick)</span>
+	<span><a href="http://dispcalgui.hoech.net/download/xUbuntu_10.10/i386/Spatiocyte.deb">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/xUbuntu_10.10/amd64/Spatiocyte.deb">x86_64</a></span>
+	</li>
+	<li>
+	<span>Ubuntu 11.04 (Natty)</span>
+	<span><a href="http://dispcalgui.hoech.net/download/xUbuntu_11.04/i386/Spatiocyte.deb">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/xUbuntu_11.04/amd64/Spatiocyte.deb">x86_64</a></span>
+	</li>
+	<li>
+	<span>Ubuntu 11.10 (Oneiric)</span>
+	<span><a href="http://dispcalgui.hoech.net/download/xUbuntu_11.10/i386/Spatiocyte.deb">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/xUbuntu_11.10/amd64/Spatiocyte.deb">x86_64</a></span>
+	</li>
+	<li>
+	<span>Ubuntu 12.04 (Precise)</span>
+	<span><a href="http://dispcalgui.hoech.net/download/xUbuntu_12.04/i386/Spatiocyte.deb">x86</a> | 
+	 <a href="http://dispcalgui.hoech.net/download/xUbuntu_12.04/amd64/Spatiocyte.deb">x86_64</a></span>
+	</li>
+       </ul>
+
+       <p>Packages made for older distributions may work on newer distributions as long as nothing substantial has changed (i.e. Python version). Also there are several distributions out there that are based on one in the above list (e.g. Linux Mint which is based on Ubuntu). This means that packages for that base distribution should also work on derivatives, you just need to know which version the derivative is based upon and pick your download accordingly.</p>
+
+       <p>In all other cases, you can try one of these universal installs that should work on a multitude of distributions:</p>
+       <p><a href="http://Spatiocyte.hoech.net/download/Spatiocyte.package">Autopackage (Python 2.5, 2.6 and 2.7, x86 and x86_64)</a></p>
+       <p><a href="http://dispcalgui.hoech.net/0install/Spatiocyte.xml">0install feed (Python 2.5, 2.6 and 2.7, x86 and x86_64)</a></p>
+       <p>To use the 0install feed, you need <a href="http://0install.net">0install</a> (“zero install”). This should be available through the package manager of your distribution.</p>
+      </div>
+      </li>
+      <li>
+      <h3>For Mac OS X (10.4 or newer)</h3>
+      <div>
+       <p>
+       <a href="http://Spatiocyte.hoech.net/download/Spatiocyte.dmg">Disk image</a>
+       </p>
+      </div>
+      </li>
+      <li>
+      <h3>For Windows (2000 or newer)</h3>
+      <div>
+       <p>
+       <a href="http://Spatiocyte.hoech.net/download/Spatiocyte-Setup.exe">Installer (recommended)</a> or <a href="http://Spatiocyte.hoech.net/download/Spatiocyte-win32.zip">ZIP archive</a>
+       </p>
+      </div>
+      </li>
+      <li>
+      <h3>Source code</h3>
+      <div>
+       <p>You need to have a working Python installation and all <a href="#requirements-source">requirements</a>.</p>
+       <p><a href="http://Spatiocyte.hoech.net/download/Spatiocyte.tar.gz">Source Tarball</a></p>
+       <p>
+       Alternatively, if you don't mind trying out development code, <a href="http://dispcalgui.svn.sourceforge.net/">browse the <acronym title="Subversion">SVN<sup><a href="#definition_SVN">[8]</a></sup></acronym> repository of the latest development version</a> (or do a full checkout using <code>svn co https://dispcalgui.svn.sourceforge.net/svnroot/dispcalgui dispcalgui</code>). But please note that the development code might contain bugs or not run at all, or only on some platform(s). Use at your own risk. 
+       </p>
+      </div>
+      </li>
+     </ul>
+    </div>
+
+    <div id="quickstart">
+     <h2>Quickstart guide</h2>
+
+     <p>This short guide intends to get you up and running quickly, but if you run into a problem, you should refer to the full <a href="#requirements">prerequisites</a> and <a href="#install">installation</a> sections.</p>
+
+     <ol>
+      <li>
+      <p><a href="#download">Get</a> and <a href="#install">install</a> the latest release of Spatiocyte. It is recommended to first remove all previous versions.</p>
+      </li>
+      <li>
+      <p>Download and unpack Argyll CMS: <a href="http://argyllcms.com/downloadlinux.html">Linux</a> | <a href="http://argyllcms.com/downloadmac.html">Mac OS</a> | <a href="http://argyllcms.com/downloadwin.html">Windows</a>. Put the extracted directory (Argyll_VX.X.X) in a convenient place on your harddisk.</p>
+      <h3>If you want to use the HCFR colorimeter under Mac OS X...</h3>
+      <div class="toggle">
+       <p>Follow the instructions under “<a href="http://argyllcms.com/doc/Installing_OSX.html">installing Argyll CMS on Mac OS X</a>” in the Argyll CMS documentation.</p>
+      </div>
+      </li>
+      <li>
+      <p>Launch Spatiocyte. If it cannot determine the path to the Argyll CMS binaries, it will prompt you to select the location manually on first launch.</p>
+      <h3>If your measurement device is a Spyder 2...</h3>
+      <div class="toggle">
+       <p>The Spyder 2 needs the vendor firmware pattern to function.</p>
+       <p>Choose “Enable Spyder 2 colorimeter...” from Spatiocyte's “Tools” menu. If the Spyder 2 software is installed or its installation media is inserted, the Spyder 2 can be enabled automatically, otherwise you will have to manually select the Spyder 2 software's setup executable.</p>
+      </div>
+      <div style="height: .25em;"></div>
+      <h3>If your measurement device is a Spyder 4...</h3>
+      <div class="toggle">
+       <p>The full range of measurement modes for the Spyder 4 are only available if they are imported from the Spyder 4 software.</p>
+       <p>Choose “Import colorimeter corrections from other display profiling software...” from Spatiocyte's “Tools” menu. If the Spyder 4 software is installed or its installation media is inserted, the colorimeter corrections can be imported automatically, otherwise you will have to manually select the Spyder 4 software's setup executable.</p>
+      </div>
+      </li>
+      <li>
+      <p>Connect your measurement device to your computer.</p>
+      <p class="info"><em>Windows only:</em> If your measurement device is <strong>not</strong> a ColorMunki Display or i1 Display Pro, you need to install an Argyll-specific driver. See <a href="#install-windows-driver">“Driver installation under Windows”.</a></p>
+      <p>Click the small icon with the swirling arrows <img src="theme/refresh_lr.png" alt="" /> in between the “Display device” and “Instrument” controls to detect connected displays devices and instruments. The detected instrument(s) should show up in the “Instrument” dropdown.</p>
+      <p class="info"><em>Linux only:</em> If you cannot access your instrument, first try unplugging and reconnecting it, or a reboot. If that doesn't help, read “<a href="http://argyllcms.com/doc/Installing_Linux.html">Installing Argyll CMS on Linux: Setting up instrument access</a>”.</p>
+      </li>
+      <li>
+      <p>Refer to the <a href="#concept">documentation</a> for <a href="#usage">usage instructions</a>.</p>
+      </li>
+     </ol>
+    </div>
+
+    <div id="requirements">
+     <h2>System requirements and other prerequisites</h2>
+
+     <div>
+      <h3>General system requirements</h3>
+      <ul>
+       <li>A recent Linux, Mac OS X (10.4 up to 10.7, 10.8 is not yet supported by Argyll CMS—if you want to help make it happen, please consider <a href="http://argyllcms.com/">donating to the Argyll CMS project</a>) or Windows (2000 or newer) operating system.</li>
+       <li>A graphics card with at least 24 bits per pixel (true color) support and the desktop set up to use this color depth.</li>
+      </ul>
+     </div>
+
+     <div id="argyll">
+      <h3>Argyll CMS</h3>
+
+      <p>To use Spatiocyte, you need to download and install <a href="http://argyllcms.com">Argyll CMS</a> (1.0 or newer).</p>
+     </div>
+
+     <div id="instruments">
+      <h3>Supported instruments</h3>
+
+      <p>You need one of the supported instruments to make measurements. All instruments supported by Argyll CMS are also supported by Spatiocyte. For display readings, these currently are:</p>
+
+      <h4>Colorimeters</h4>
+      <ul>
+       <li>X-Rite ColorMunki Create (same as i1 Display 2)</li>
+       <li>X-Rite DTP92</li>
+       <li>X-Rite DTP94</li>
+       <li>X-Rite/GretagMacbeth/Pantone Huey</li>
+       <li>X-Rite/GretagMacbeth i1 Display 1</li>
+       <li>X-Rite/GretagMacbeth i1 Display 2/LT</li>
+       <li>X-Rite i1 Display Pro, ColorMunki Display (new in Argyll CMS 1.3.4)</li>
+       <li>Datacolor/ColorVision Spyder 2</li>
+       <li>Datacolor Spyder 3 (since Argyll CMS 1.1.0)</li>
+       <li>Datacolor Spyder 4 (new in Argyll CMS 1.3.6)</li>
+      </ul>
+
+      <h4>Spectrometers</h4>
+      <ul>
+       <li>X-Rite ColorMunki Design, ColorMunki Photo (since Argyll CMS 1.1.0)</li>
+       <li>X-Rite/GretagMacbeth i1 Monitor (since Argyll CMS 1.0.3)</li>
+       <li>X-Rite/GretagMacbeth i1 Pro</li>
+       <li>X-Rite/GretagMacbeth Spectrolino</li>
+      </ul>
+
+      <p>Note that the <em>i1 Display Pro</em> and <em>i1 Pro</em> are very different instruments despite their naming similarities.</p>
+
+      <p>Also there are currently (2011-09-02) four instruments (or rather, packages) under the ColorMunki brand, two of which are spectrometers, and two are colorimeters:</p>
+      <ul>
+       <li>The <em>ColorMunki Design</em> and <em>ColorMunki Photo</em> spectrometers differ only in the functionality of the bundled vendor software. There are no differences between the instruments when used with Argyll CMS and Spatiocyte.</li>
+       <li>The <em>ColorMunki Display</em> colorimeter is a less expensive version of the i1 Display Pro colorimeter. It comes bundled with a simpler vendor software and has longer measurement times compared to the i1 Display Pro. Apart from that, the instrument appears to be virtually identical.</li>
+       <li>The <em>ColorMunki Create</em> colorimeter is the same instrument as the i1 Display 2.</li>
+      </ul>
+     </div>
+
+     <div id="requirements-unattended">
+      <h3>Additional requirements for unattended calibration and profiling</h3>
+
+      <p>When using a spectrometer that is supported by the unattended feature (see below), having to take the instrument off the screen to do a sensor self-calibration again after display calibration before starting the measurements for profiling may be avoided if the menu item “Allow skipping of spectrometer self-calibration” in the “Options” menu is checked (colorimeter measurements are always unattended because they generally do not require a sensor calibration away from the screen, with the exception of the i1 Display 1).</p>
+
+      <p>Unattended calibration and profiling currently supports the following spectrometers in addition to most colorimeters:</p>
+
+      <ul>
+       <li>X-Rite ColorMunki</li>
+       <li>X-Rite/GretagMacbeth i1 Monitor &amp; Pro</li>
+       <li>X-Rite/GretagMacbeth Spectrolino</li>
+      </ul>
+
+      <p>Be aware you may still be forced to do a sensor calibration if the instrument requires it. Also, please look at the possible <a href="#issue-samplereadfail">caveats</a>.</p>
+     </div>
+
+     <div id="requirements-source">
+      <div id="requirements-source-basic">
+       <h3>Additional requirements for using the source code</h3>
+
+       <div>
+	<p>You can <a href="#install">skip</a> this section if you downloaded a package, installer, ZIP archive or disk image of Spatiocyte for your operating system and do not want to run or compile from source.</p>
+
+	<h4>All platforms:</h4>
+	<ul>
+	 <li><a href="http://python.org/">Python</a> &gt;= v2.5 &lt;= v2.7.x (2.7.x is the recommended version. Mac OS X users: If you want to compile Spatiocyte from source, it is advisable to <strong>first</strong> install XCode and <strong>then</strong> the official python.org Python)</li>
+	 <li><a href="http://numpy.scipy.org/">NumPy</a></li>
+	 <li><a href="http://wxpython.org/">wxPython</a> <acronym title="Graphical User Interface">GUI<sup><a href="#definition_GUI">[4]</a></sup></acronym> toolkit</li>
+	</ul>
+
+	<h4>Windows:</h4>
+	<ul>
+	 <li><a href="http://sourceforge.net/projects/pywin32/">pywin32</a></li>
+	 <li><a href="http://pypi.python.org/pypi/WMI/">WMI</a></li>
+	</ul>
+       </div>
+      </div>
+
+      <div id="requirements-source-comile">
+       <h3>Additional requirements for compiling</h3>
+
+       <div>
+	<p>You can <a href="#install">skip</a> this section if you downloaded a python package of Spatiocyte for your operating system and do not want to compile from source.</p>
+
+	<h4>Linux:</h4>
+	<ul>
+	 <li>GCC and development headers for Python + X11 + Xrandr + Xinerama + Xxf86vm if not already installed, they should be available through your distribution's packaging system</li>
+	</ul>
+
+	<h4>Mac OS X:</h4>
+	<ul>
+	 <li><a href="http://developer.apple.com/xcode/">XCode</a></li>
+	 <li><a href="http://pypi.python.org/pypi/py2app/">py2app</a> if you want to build a standalone executable (on Mac OS X before 10.5, install setuptools first: <code>sudo python util/ez_setup.py setuptools</code>)</li>
+	</ul>
+
+	<h4>Windows:</h4>
+	<ul>
+	 <li>a C-compiler (e.g. <a href="http://www.microsoft.com/germany/Express/product/visualcplusplusexpress.aspx">MS Visual C++ Express</a> or <a href="http://www.mingw.org">MinGW</a>. If you're using the official python.org Python 2.6 or later I'd recommend Visual C++ Express as it works out of the box)</li>
+	 <li><a href="http://pypi.python.org/pypi/py2exe/">py2exe</a> if you want to build a standalone executable</li>
+	</ul>
+       </div>
+      </div>
+
+      <div id="requirements-source-run">
+       <h3 id="runsource">Running directly from source without installation</h3>
+
+       <div>
+	<p>One-time setup instructions:</p>
+
+	<ol>
+	 <li>Open a shell.</li>
+	 <li><code>cd</code> into the source directory (e.g. <code>Spatiocyte-1.0.9.0</code> or <code>dispcalgui</code>).</li>
+	 <li>If you use a version from the SVN repository, run <code>python setup.py</code> to create the version file.</li>
+	 <li>Run <code>python setup.py build_ext -i</code> to build the extension modules (you may be able to skip this step on Linux and Mac OS X as the source already includes compiled versions of the extension modules)</li>
+	</ol>
+
+	<p>You can then run <code>python Spatiocyte.pyw</code> (or launch it by double-clicking).</p>
+       </div>
+      </div>
+     </div>
+
+    </div>
+
+    <div id="install">
+     <h2>Installation</h2>
+
+     <p>It is recommended to first remove all previous versions.</p>
+
+     <div id="install-windows-driver">
+      <h3>Driver installation under Windows</h3>
+      <div class="toggle">
+       <ul>
+	<li>
+	<h4>If you already have drivers for your measurement device installed...</h4>
+	<p>Read “Adding Argyll drivers to existing drivers” (if you are using vendor drivers) or “Updating Argyll drivers” (if you use a prior version of the Argyll drivers) under “<a href="http://argyllcms.com/doc/Installing_MSWindows.html">Installing Argyll CMS on Microsoft Windows</a>” in the Argyll CMS documentation.</p>
+	</li>
+	<li>
+	<h4>If this is a fresh install...</h4>
+	<ol>
+	 <li>A “Found new hardware” dialog should appear.</li>
+	 <li>
+	 <ul>
+	  <li><h5>If you are using Windows Vista/7...</h5>
+	  <ol>
+	   <li>Select “Locate and install driver software (recommended)”.</li>
+	   <li>If a “User Account Control” window pops up, select “Continue”.</li>
+	   <li>Select “Don't search online”.</li>
+	   <li>Select “I don't have the disc, show me other options”.</li>
+	   <li>Select “Browse my computer for driver software (advanced)”.</li>
+	  </ol>
+	  </li>
+	  <li><h5>If you are using Windows XP...</h5>
+	  <ol>
+	   <li>In the window “Can Windows connect to Windows Update to search for software?” select “No, not this time” and “Next”.</li>
+	   <li>Select “Install from a list or specific location (advanced)” then “Next”.</li>
+	   <li>Select “Search for the best driver in these locations”, “Include this location in the search” and “Browse...”.</li>
+	  </ol>
+	  </li>
+	  <li><h5>If you are using Windows 2000...</h5>
+	  <ol>
+	   <li>Select “Next”, then “Search for a suitable driver for my device (recommended)”, and “Next” again.</li>
+	   <li>Tick the “Specify a location” box, then select “Next”.</li>
+	   <li>In the window “Insert the manufacturer's installation disk” select “Browse...”.</li>
+	  </ol>
+	  </li>
+	 </ul>
+	 </li>
+	 <li>Locate the “libusbw” subdirectory in your Argyll_VX.X.X directory (under Windows 2000, you also need to select the .inf file that corresponds to your device, then select “Open” and “OK”). Select “Next”.</li>
+	 <li>If a “Windows Security” dialog pops up, select “Install this driver software anyway”.</li>
+	 <li>A window stating the successful installation of the driver should show. Click “Finish”/“Close”.</li>
+	</ol>
+	</li>
+       </ul>
+      </div>
+     </div>
+
+     <div id="install-deb-rpm">
+      <h3>Linux package (.deb/.rpm)</h3>
+
+      <div>
+       <p>A lot of distributions allow easy installation of packages via the graphical desktop, i.e. by double-clicking the package file's icon. Please consult your distribution's documentation if you are unsure how to install packages.</p>
+       <p class="info">If you cannot access your instrument, first try unplugging and reconnecting it, or a reboot. If that doesn't help, read “<a href="http://argyllcms.com/doc/Installing_Linux.html">Installing Argyll CMS on Linux: Setting up instrument access</a>”.</p>
+      </div>
+     </div>
+
+     <div id="install-autopackage">
+      <h3>Linux Autopackage (.package)</h3>
+
+      <div>
+       <p>Before installing the autopackage, first install wxPython (on some systems called python-wxGTK or python-wxWidgets) and NumPy using your system's package management software. To install the autopackage, follow these three steps (you only have to do it once, next time, you can just skip these steps and open the .package file directly):</p>
+
+       <ol>
+	<li>Click on the package with your right mouse button. Then click on the “Properties” menu item.</li>
+	<li>Go to the “Permissions” tab.
+	<ul>
+	 <li>Check the “Execute”, “Exec” or “Is Executable” checkbox. If there are more than one Execute/Exec checkboxes, check the top-most one.</li>
+	 <li>Click “Close” or “OK”, depending on the dialog.</li>
+	</ul>
+	</li>
+	<li>If you already have the software installed from your distributions packages or from the source, remove it first. Then <em>open</em> the package file. If you are asked whether you want to display or run the package, choose “Run”.</li>
+       </ol>
+       <p>The installation will now begin. Follow further intructions that are displayed, if any.</p>
+       <p class="info">If you cannot access your instrument, first try unplugging and reconnecting it, or a reboot. If that doesn't help, read “<a href="http://argyllcms.com/doc/Installing_Linux.html">Installing Argyll CMS on Linux: Setting up instrument access</a>”.</p>
+      </div>
+     </div>
+
+     <div id="install-mac">
+      <h3>Mac OS X</h3>
+
+      <div>
+       <p>Mount the disk image and option-drag its icon to your “Applications” folder. Afterwards open the “Spatiocyte” folder in your “Applications” folder and drag Spatiocyte's icon to the dock if you want easy access.</p>
+
+       <p class="info">If you want to use the HCFR colorimeter under Mac OS X, follow the instructions under “<a href="http://argyllcms.com/doc/Installing_OSX.html">installing Argyll CMS on Mac OS X</a>” in the Argyll CMS documentation.</p>
+      </div>
+     </div>
+
+
+     <div id="install-windows-setup">
+      <h3>Windows (Installer)</h3>
+
+      <div>
+       <p>Launch the installer which will guide you trough the required setup steps.</p>
+       <p class="info">If your measurement device is <strong>not</strong> a ColorMunki Display or i1 Display Pro, you need to install an Argyll-specific driver. <a href="#install-windows-driver">See “Driver installation under Windows”.</a></p>
+      </div>
+     </div>
+
+
+     <div id="install-windows-zip">
+      <h3>Windows (ZIP archive)</h3>
+
+      <div>
+       <p>Unpack and then simply run Spatiocyte from the created folder.</p>
+       <p class="info">If your measurement device is <strong>not</strong> a ColorMunki Display or i1 Display Pro, you need to install an Argyll-specific driver. <a href="#install-windows-driver">See “Driver installation under Windows”.</a></p>
+      </div>
+     </div>
+
+     <div id="install-src">
+      <h3>Source code (all platforms)</h3>
+
+      <div>
+       <p>See the “Prerequisites” section to <a href="#runsource">run directly from source without installation</a>.</p>
+
+       <p>Starting with Spatiocyte 0.2.5b, you can use standard distutils/setuptools commands with setup.py to build, install, and create packages. <code>sudo python setup.py install</code> will compile the extension modules and do a standard installation. Run <code>python setup.py --help</code> or <code>python setup.py --help-commands</code> for more information. A few additional commands and options which are not part of distutils or setuptools (and thus do not appear in the help) are also available:</p>
+
+       <h4>Additional setup commands</h4>
+       <div class="info">
+	<dl>
+	 <dt><code>bdist_appdmg</code> (Mac OS X only)</dt>
+	 <dd>Creates a DMG of a previously created (by the py2app or bdist_standalone commands) application bundle.</dd>
+	 <dt><code>bdist_deb</code> (Linux/Debian-based)</dt>
+	 <dd>Create an installable Debian (.deb) package, much like the standard distutils command bdist_rpm for RPM packages. Prerequisites:
+	 You first need to install alien and rpmdb, create a dummy RPM database via <code>sudo rpmdb --initdb</code>, then edit (or create from scratch) the setup.cfg (you can have a look at misc/setup.ubuntu9.cfg for a working example). Under Ubuntu, running utils/dist_ubuntu.sh will automatically use the correct setup.cfg. If you are using Ubuntu 11.04 or any other debian-based distribution which has Python 2.7 as default, you need to edit /usr/lib/python2.7/distutils/command/bdist_rpm.py, and change the line <code>install_cmd = ('%s install <span style="color: #c00">-O1</span> --root=$RPM_BUILD_ROOT '</code> to <code>install_cmd = ('%s install --root=$RPM_BUILD_ROOT '</code> by removing the <code><span style="color: #c00">-O1</span></code> flag. Also, you need to change /usr/lib/rpm/brp-compress to do nothing (e.g. change the file contents to <code>exit 0</code>, but don't forget to create a backup copy first) otherwise you will get errors when building.</dd>
+	 <dt><code>bdist_standalone</code></dt>
+	 <dd>Creates a standalone executable that does not require a Python installation. Uses bbfreeze on Linux, py2app on Mac OS X and py2exe on Windows. setup.py will try and automatically download/install these packages for you if they are not yet installed and if not using the --use-distutils switch. Note: On Mac OS X, older versions of py2app (before 0.4) are not able to access files inside python “egg” files (which are basically ZIP-compressed folders). Setuptools, which is needed by py2app, will normally be installed in “egg” form, thus preventing those older py2app versions from accessing its contents. To fix this, you need to remove any installed setuptools-&lt;version&gt;-py&lt;python-version&gt;.egg files from your Python installation's site-packages directory (normally found under <code>/Library/Frameworks/Python.framework/Versions/Current/lib</code>). Then, run <code>sudo python util/ez_setup.py -Z setuptools</code> which will install setuptools unpacked, thus allowing py2app to acces all its files. This is no longer an issue with py2app 0.4 and later.</dd>
+	 <dt><code>buildservice</code></dt>
+	 <dd>Creates control files for openSUSE Build Service (also happens implicitly when invoking <code>sdist</code>).</dd>
+	 <dt><code>finalize_msi</code> (Windows only)</dt>
+	 <dd>Adds icons and start menu shortcuts to the MSI installer previously created with <code>bdist_msi</code>. Successful MSI creation needs a <a href="http://bugs.python.org/file15898/msilib_make_short.diff">patched msilib</a> (<a href="http://bugs.python.org/issue1128">additional</a> <a href="http://bugs.python.org/issue7639">information</a>).</dd>
+	 <dt><code>inno</code> (Windows only)</dt>
+	 <dd>Creates an Inno Setup install script for an executable created with the <code>py2exe</code> or <code>bdist_standalone</code> commands.</dd>
+	 <dt><code>purge</code></dt>
+	 <dd>Removes the <code>build</code> and <code>Spatiocyte.egg-info</code> directories including their contents.</dd>
+	 <dt><code>purge_dist</code></dt>
+	 <dd>Removes the <code>dist</code> directory and its contents.</dd>
+	 <dt><code>readme</code></dt>
+	 <dd>Creates README.html by parsing misc/README.template.html and substituting placeholders like date and version numbers.</dd>
+	 <dt><code>uninstall</code></dt>
+	 <dd>Uninstalls the package. You can specify the same options as for the <code>install</code> command.</dd>
+	</dl>
+       </div>
+
+       <h4>Additional setup options</h4>
+       <div class="info">
+	<dl>
+	 <dt><code>--cfg=&lt;name&gt;</code></dt>
+	 <dd>Use an alternate setup.cfg, e.g. tailored for a given Linux distribution. The original setup.cfg is backed up and restored afterwards. The alternate file must exist as misc/setup.&lt;name&gt;.cfg</dd>
+	 <dt><code>-n</code>, <code>--dry-run</code></dt>
+	 <dd>Don't actually do anything. Useful in combination with the uninstall command to see which files would be removed.</dd>
+	 <dt><code>--skip-instrument-configuration-files</code></dt>
+	 <dd>Skip installation of udev rules and hotplug scripts.</dd>
+	 <dt><code>--skip-postinstall</code></dt>
+	 <dd>Skip post-installation on Linux (an entry in the desktop menu will still be created, but may not become visible until logging out and back in or rebooting) and Windows (no shortcuts in the start menu will be created at all).</dd>
+	 <dt><code>--use-distutils</code></dt>
+	 <dd>Force setup to use distutils (default) instead of setuptools. This is useful in combination with the bdist* commands, because it will avoid an artificial dependency on setuptools. This is actually a switch, use it once and the choice is remembered until you specify the <code>--use-setuptools</code> switch (see next paragraph).</dd>
+	 <dt><code>--use-setuptools</code></dt>
+	 <dd>Force setup to try and use setuptools instead of distutils. This is actually a switch, use it once and the choice is remembered until you specify the <code>--use-distutils</code> switch (see above).</dd>
+	</dl>
+       </div>
+      </div>
+     </div>
+
+     <h4>Instrument-specific setup</h4>
+
+     <p>If your measurement device is a Spyder 2, choose “Enable Spyder 2 colorimeter...” from Spatiocyte's “Tools” menu. If you don't have the spyder software installed or its location cannot be determined, you will be prompted to select the setup executable that came with the instrument's installation media to enable it.</p>
+
+     <p>The full range of measurement modes for the Spyder 4 are only available if they are imported from the Spyder 4 software.</p>
+
+     <p>Choose “Import colorimeter corrections from other display profiling software...” from Spatiocyte's “Tools” menu. If the Spyder 4 software is installed or its installation media is inserted, the colorimeter corrections can be imported automatically, otherwise you will have to manually select the Spyder 4 software's setup executable.</p>
+
+    </div>
+   </div>
+   <p id="copyright">Spatiocyte © 2009-2012 </p>
+   <div id="footer-container">
+    <div id="footer"><a href="#toc" id="totop">↑ Top</a></div>
+   </div>
+   
+	 <script>
+    if(window.chrome) {
+      $('.banner li').css('background-size', '100% 100%');
+    }
+    
+    $('.banner').unslider({
+      fluid: true,
+      speed: 500,
+      delay: 5000
+    });
+  
+    //  Find any element starting with a # in the URL
+    //  And listen to any click events it fires
+    $('a[href^="#"]').click(function() {
+      //  Find the target element
+      var target = $($(this).attr('href'));
+      
+      //  And get its position
+      var pos = target.offset(); // fallback to scrolling to top || {left: 0, top: 0};
+      
+      //  jQuery will return false if there's no element
+      //  and your code will throw errors if it tries to do .offset().left;
+      if(pos) {
+        //  Scroll the page
+        $('html, body').animate({
+          scrollTop: pos.top,
+          scrollLeft: pos.left
+        }, 1000);
+      }
+      
+      //  Don't let them visit the url, we'll scroll you there
+      return false;
+    });
+    var GoSquared = {acct: 'GSN-396664-U'};
+   </script>
+  </body>
+</html>
+
