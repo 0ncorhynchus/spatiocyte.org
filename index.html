@@ -1,21 +1,215 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--[if lte IE 8 ]>
-<html xmlns="http://www.w3.org/1999/xhtml" class="ie_lte_8">
- <![endif]-->
- <!--[if (gt IE 8)|!(IE) ]><!-->
- <html xmlns="http://www.w3.org/1999/xhtml">
- <!--<![endif]-->
-  <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!doctype html>
+<html lang="en">
+	<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
    <title>Spatiocyte: a lattice-based particle simulator</title>
    <meta name="description" content="Lattice-based stochastic particle simulator" />
-   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-   <script type="text/javascript" src="script/jquery.js"></script>
-   <link rel="stylesheet" href="css/remove.css">
-   <link rel="stylesheet" href="css/style.css">
-	 <meta name="viewport" content="width=device-width">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/magnific.css">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+   <h4>
+    <object data="img/logo.svg" type="image/svg+xml"></object>
+    <a href="http://spatiocyte.org">Spatiocyte</a>
+    <span>
+     <span class="dash">—</span> A lattice-based particle simulator
+    </span>
+   </h4>
+		
+		<div class="banner">
+			<ul>
+
+				<li style="background-image: url('img/3D.jpg');">
+					<h1>3D Diffusion and Reaction.</h1>
+					<p>Three-dimensional diffusion and reaction in a cubic volume.</p>
+					<a class="popup-youtube" href="https://www.youtube.com/watch?v=TuYY7_A-134">View Movie</a>
+				</li>
+				<li style="background-image: url('img/2D.jpg');">
+					<h1>2D Diffusion and Reaction.</h1>
+					<p>Two-dimensional diffusion and clustering reaction on a planar surface.</p>
+          <a class="popup-youtube" href="https://www.youtube.com/watch?v=pafNxDhVLy4">View Movie</a>
+				</li>
+
+				<li style="background-image: url('img/1D.jpg');">
+					<h1>1D Diffusion and Reaction.</h1>
+					<p>One-dimensional random walk on a filament.</p>
+          <a class="popup-youtube" href="https://www.youtube.com/watch?v=hlC0zTgRlAI">View Movie</a>
+				</li>
+
+				<li style="background-image: url('img/particle_tracking.jpg');">
+					<h1>Particle tracking with fluorescent tags.</h1>
+					<p>Individual particle tracking across different states with fluorescent tagging.</p>
+          <a class="popup-youtube" href="https://www.youtube.com/watch?v=FtffUhM546Q">View Movie</a>
+				</li>
+
+				<li style="background-image: url('img/microtubule.jpg');">
+					<h1>Render with Blender.</h1>
+					<p>Create beautifully rendered simulation movies with Blender.</p>
+          <a class="popup-youtube" href="https://www.youtube.com/watch?v=6cXKIBTBfyw">View Movie</a>
+				</li>
+
+				<li style="background-image: url('img/min3.jpg');">
+					<h1>Scriptable, yet Fast.</h1>
+					<p>Modeling, simulation and logging are Python scriptable, but simulation speed is uncompromised thanks to Spatiocyte's C++ core algorithm modules.</p>
+					
+					<a class="btn" href="#howto">Get Spatiocyte</a>
+				</li>
+				
+				<li style="background-image: url('img/min2.jpg');">
+					<h1>Open-source.</h1>
+					<p>Software and documentation of Spatiocyte are publicly hosted on GitHub.</p>
+					
+					<a class="btn" href="https://github.com/ecell/spatiocyte" target="_blank">Contribute</a>
+				</li>
+				
+				<li style="background-image: url('img/min1.jpg');">
+					<h1>Software Support.</h1>
+					<p>Contact us if you have any issues with Spatiocyte.</p>
+					<a class="btn" href="http://groups.google.com/d/forum/spatiocyte-users?hl=en" target="_blank">Join User Group</a>
+				</li>
+
+				<li style="background-image: url('img/spectrin.jpg');">
+					<h1>Multi-algorithm Simulation.</h1>
+					<p>Simulate with mass action, Gillespie Next-Reaction and lattice-based particle diffusion and reaction algorithms simultaneously.</p>
+					<a class="btn" href="https://github.com/ecell/spatiocyte/blob/master/examples/ode-snrp-particle/ode-snrp-particle.py" target="_blank">Example Model</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="features">
+			<ul class="wrap">
+				<li class="responsive">
+					<b>1D, 2D and 3D diffusion</b>
+					<p>Molecules can diffuse and react in filament (1D), membrane (2D) and cytosolic (3D) compartments.</p>
+				</li>
+				
+				<li class="keyboard">
+					<b>Molecular crowding</b>
+					<p>The effects of intracellular molecular crowding can be studied since each diffusing molecule has spatial dimensions.</p>
+				</li>
+				
+				<li class="height">
+					<b>Multi-algorithm</b>
+					<p>Run multi-algorithm simulation with Next-Reaction, mass-action and lattice-based particle reaction-diffusion methods simultaneously.</p>
+				</li>
+				
+				<li class="browser">
+					<b>Python script</b>
+					<p>Build and run models, log and plot data in Python. Simulation speed, however, is uncompromised thanks to C++ core algorithm modules.</p>
+				</li>
+			</ul>
+		</div>
+		
+		<div id="howto" class="how wrap">
+			<h2>Spatiocyte Quick Start</h2>
+			
+			<ol>
+				<li>
+					<div>
+						<h3>Get and run the install script</h3>
+						<p>Spatiocyte runs on Ubuntu Linux and Mac OS X Yosemite systems. On a fresh Ubuntu or a Mac OS X system, Spatiocyte requires several additional packages to run. To install these packages and Spatiocyte, open a terminal and execute the following instructions:</p>
+					</div>
+					
+          <h5>Ubuntu Linux:</h5>
+					<pre>$ wget https://raw.githubusercontent.com/ecell/spatiocyte/master/install-spatiocyte-ubuntu.sh
+$ sh -x install-spatiocyte-ubuntu.sh </pre>
+          <h5>Mac OS X:</h5>
+					<pre>$ curl https://raw.githubusercontent.com/ecell/spatiocyte/master/install-spatiocyte-mac.sh
+$ sh -x install-spatiocyte-mac.sh </pre>
+						<p>Enter your password when requested since some packages require the administrator privilege to install. If you have any issues during install, post the error messages to the <a href="https://groups.google.com/forum/?hl=en#!forum/spatiocyte-users" target="_blank">Spatiocyte Users</a> forum. On Mac, the installation script will take a longer time to finish executing because more packages need to be downloaded. We can use Blender to render simulation snapshots and VLC to view movies of the snapshots. Since the installation script does not install them on Mac, you can download and install them yourself from <a href="http://www.blender.org/" target="_blank">http://www.blender.org/</a> and <a href="http://www.videolan.org/" target="_blank">http://www.videolan.org/</a>.</p>
+				</li>
+				
+				<li>
+					<div>
+						<h3>Test the installation</h3>
+						<p>Close and reopen the terminal for the installation to take effect. To test if the installation is successful, run the following command in the terminal:</p>
+					</div>
+					<pre>$ ecell3-session-monitor</pre>
+					<p>The above command will open the E-Cell Session Monitor, as shown below. You have now sucessfully installed Spatiocyte! If for some reason, the Session Monitor does not come up, please post the error message to the <a href="https://groups.google.com/forum/?hl=en#!forum/spatiocyte-users" target="_blank">Spatiocyte Users</a> forum.</p>
+          <img src="img/session_monitor.jpg" alt="E-Cell Session Monitor">
+				</li>
+				
+				<li>
+					<div>
+						<h3>Run a model</h3>
+						<p>Now try running a simple 1D diffusion Python model available in the <a href="https://github.com/ecell/spatiocyte/tree/master/examples/1D" target="_blank">examples/1D</a> directory:</p>
+					</div>
+					
+					<pre>$ cd $HOME/wrk/spatiocyte/examples/1D
+$ ecell3-session 1D.py</pre>
+						<p>The simulator will terminate itself once the simulation has ended. To view the simulated molecules, run the Spatiocyte Visualizer by issuing:</p>
+            <pre>$ spatiocyte</pre>
+						<p>More models can be found under the <a href="https://github.com/ecell/spatiocyte/tree/master/examples" target="_blank">examples directory</a>. To run them, follow the instructions in the README file in each example directory.</p>
+				</li>
+				
+				<li>
+					<div>
+						<h3>Any issues? Contact us!</h3>
+            <p>If you have any issues or questions about Spatiocyte, <a href="https://groups.google.com/forum/?hl=en#!forum/spatiocyte-users" target="_blank">message</a> us. Spatiocyte documentation can be found <a href="http://spatiocyte.readthedocs.org/en/latest/intro.html" target="_blank">here</a>.</p>
+					</div>
+					
+				</li>
+			</ol>
+		</div>
+		<div id="howto" class="how wrap">
+       <h2>References</h3>
+			<ol>
+        <li>Arjunan, S. N. V., & Tomita, M. (2009). <a href="http://precedings.nature.com/documents/3526/version/1/files/npre20093526-1.pdf" target="_blank">Modeling reaction-diffusion of molecules on surface and in volume spaces with the E-Cell System</a>. International Journal of Computer Science and Information Security, 3(1), 211–216</li>
+        <li>Arjunan, S. N. V., & Tomita, M. (2010). <a href="http://link.springer.com/content/pdf/10.1007%2Fs11693-009-9047-2.pdf" target="_blank">A new multicompartmental reaction-diffusion modeling method links transient membrane attachment of E. coli MinE to E-ring formation</a>. Systems and Synthetic Biology, 4(1), 35–53</li>
+        <li>Arjunan, S. N. V. (2013). <a href="http://www.ncbi.nlm.nih.gov/books/NBK84261/" target="_blank">A guide to modeling reaction–diffusion of molecules with the E-Cell system</a>, in: E-Cell System: basic concepts and applications, Springer, pp. 43–62</li>
+			<ol/>
+     </div>
+	
+		
    <script src="script/jquery-latest.min.js"></script>
-   <script src="script/unslider.min.js"></script>
+   <script src="script/unslider.js"></script>
+   <script src="script/magnific.js"></script>
+		<script>
+			$('.banner').unslider({
+				fluid: true,
+				dots: true,
+				speed: 300
+			});
+		
+			//  Find any element starting with a # in the URL
+			//  And listen to any click events it fires
+			$('a[href^="#"]').click(function() {
+				//  Find the target element
+				var target = $($(this).attr('href'));
+				
+				//  And get its position
+				var pos = target.offset(); // fallback to scrolling to top || {left: 0, top: 0};
+				
+				//  jQuery will return false if there's no element
+				//  and your code will throw errors if it tries to do .offset().left;
+				if(pos) {
+					//  Scroll the page
+					$('html, body').animate({
+						scrollTop: pos.top,
+						scrollLeft: pos.left
+					}, 1000);
+				}
+				
+				//  Don't let them visit the url, we'll scroll you there
+				return false;
+			});
+			
+			var GoSquared = {acct: 'GSN-396664-U'};
+		</script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+          disableOn: 700,
+          type: 'iframe',
+          mainClass: 'mfp-fade',
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false
+        });
+      });
+    </script>
    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,96 +218,6 @@
     ga('create', 'UA-56513360-1', 'auto');
     ga('send', 'pageview');
   </script>
-	</head>
-	<body>
-   <h1>
-    <object data="img/logo.svg" type="image/svg+xml"></object>
-    <a href="http://spatiocyte.org">Spatiocyte</a>
-    <span>
-     <span class="dash">—</span> A lattice-based particle simulator
-    </span>
-   </h1>
-   <div class="container">
-    <div id="content-slider">
-		 <div class="banner">
-			<ul>
-				<li style="background-image: url('img/slide1.jpg');"> </li>
-				<li style="background-image: url('img/slide5.jpg');"> </li>
-				<li style="background-image: url('img/slide6.jpg');"> </li>
-				<li style="background-image: url('img/slide2.jpg');"> </li>
-				<li style="background-image: url('img/slide4.jpg');"> </li>
-				<li style="background-image: url('img/slide3.jpg');"> </li>
-			</ul>
-		 </div>
-		</div>
-	 </div>
-   <div id="content">
-    <div id="toc">
-     <h2>Table of contents</h2>
-     <ul>
-       <li><a href="#download">Download</a></li>
-       <li><a href="#install">Installation Guide</a></li>
-       <li><a href="#guide">User Guide</a></li>
-       <li><a href="#references">References</a></li>
-     </ul>
-    </div>
-     <div id="download">
-       <h2>Download</h2>		
-       <p>git clone https://github.com/ecell/spatiocyte.git
-     </div>
-     <div id="install">
-       <h2>Installation Guide</h3>		
-       <p> <a href="http://spatiocyte.readthedocs.org/en/latest/install.html">http://spatiocyte.readthedocs.org/en/latest/install.html</a>
-     </div>
-     <div id="guide">
-       <h2>User Guide</h3>		
-       <p> <a href="http://spatiocyte.readthedocs.org/en/latest/intro.html">http://spatiocyte.readthedocs.org/en/latest/intro.html</a>
-     </div>
-     <div id="references">
-       <h2>References</h3>
-        <li>Arjunan, S. N. V., & Tomita, M. (2009). <a href="http://precedings.nature.com/documents/3526/version/1/files/npre20093526-1.pdf">Modeling reaction-diffusion of molecules on surface and in volume spaces with the E-Cell System</a>. International Journal of Computer Science and Information Security, 3(1), 211–216</li>
-        <li>Arjunan, S. N. V., & Tomita, M. (2010). <a href="http://www.springerlink.com/content/438375471t332vx6/fulltext.pdf">A new multicompartmental reaction-diffusion modeling method links transient membrane attachment of E. coli MinE to E-ring formation</a>. Systems and Synthetic Biology, 4(1), 35–53</li>
-        <li>Arjunan, S. N. V. (2013). <a href="http:// www.landesbioscience.com/pdf/04Arjunan_Arjunan.pdf">A guide to modeling reaction–diffusion of molecules with the E-Cell system</a>, in: E-Cell System, Springer, pp. 43–62</li>
-     </div>
-   </div>
-   <div id="footer-container">
-    <div id="footer"><a href="#toc" id="totop">↑ Top</a></div>
-   </div>
-	 <script>
-    if(window.chrome) {
-      $('.banner li').css('background-size', '100% 100%');
-    }
-    
-    $('.banner').unslider({
-      fluid: true,
-      speed: 500,
-      delay: 5000
-    });
-  
-    //  Find any element starting with a # in the URL
-    //  And listen to any click events it fires
-    $('a[href^="#"]').click(function() {
-      //  Find the target element
-      var target = $($(this).attr('href'));
-      
-      //  And get its position
-      var pos = target.offset(); // fallback to scrolling to top || {left: 0, top: 0};
-      
-      //  jQuery will return false if there's no element
-      //  and your code will throw errors if it tries to do .offset().left;
-      if(pos) {
-        //  Scroll the page
-        $('html, body').animate({
-          scrollTop: pos.top,
-          scrollLeft: pos.left
-        }, 1000);
-      }
-      
-      //  Don't let them visit the url, we'll scroll you there
-      return false;
-    });
-    var GoSquared = {acct: 'GSN-396664-U'};
-   </script>
-  </body>
-</html>
 
+	</body>
+</html>
