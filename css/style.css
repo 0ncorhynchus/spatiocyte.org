@@ -430,7 +430,7 @@ h4 .dash {
 
 h4 {
   left: 30px;
-  top: 10px;
+  top: 5px;
   margin-left: -17px;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 1);
 }
@@ -453,10 +453,8 @@ h4 > a {
 
 h4 span {
   /*color: #2f1b01;*/
-  font-size: 12px;
-  padding-left: 10px;
-  margin-top: -7px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+  font-size: 10px;
+  margin-top: -10px;
 }
 
   .wrap {
