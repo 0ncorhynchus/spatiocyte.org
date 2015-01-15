@@ -480,8 +480,7 @@ h4 .dash {
   .banner p {
     font-size: 10px;
     width: 90%;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    margin: 0 auto;
   }
 
   .banner .btn, .banner .popup-youtube {
