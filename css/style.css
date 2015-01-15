@@ -423,6 +423,10 @@ h4 .dash {
   width: 960px;
 }
 
+.wrap img {
+  max-width: 70%;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 900px) {
   .wrap {
     width: 90%;
