@@ -427,6 +427,38 @@ h4 .dash {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 900px) {
+
+h4 {
+  left: 30px;
+  top: 10px;
+  margin-left: -17px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+h4 object {
+  width: 30px;
+  height: 30px;
+  top: 5px;
+}
+
+h4 > a {
+  padding-left: 30px;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 48px;
+  text-decoration: none;
+}
+
+h4 span {
+  /*color: #2f1b01;*/
+  font-size: 12px;
+  padding-left: 10px;
+  margin-top: -7px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+}
+
   .wrap {
     width: 90%;
   }
@@ -449,7 +481,6 @@ h4 .dash {
     padding-top: 130px;
     padding-bottom: 50px;
     height: 240px;
-    background-size: 80% 80%;
   }
 
   .banner p {
