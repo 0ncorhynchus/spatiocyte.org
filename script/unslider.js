@@ -62,8 +62,8 @@
                     e.isFunction(n[this.className]) && n[this.className]()
                 })
             }
-            if($.event.special.swipe) {
-              this.el.on('swipeleft', _.prev).on('swiperight', _.next);
+            if (e.event.swipe) {
+                this.el.on("swipeleft", n.prev).on("swiperight", n.next)
             }
         };
         this.move = function(t, r) {
