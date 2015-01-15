@@ -431,6 +431,10 @@ h4 .dash {
     width: 90%;
   }
 
+  .wrap img {
+    max-width: 100%;
+  }
+
   #logo {
     left: 50px;
     top: 30px;
