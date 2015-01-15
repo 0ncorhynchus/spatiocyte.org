@@ -445,7 +445,7 @@ h4 .dash {
   .banner ul li {
     padding-top: 130px;
     padding-bottom: 50px;
-    min-height: 200px;
+    max-height: 200px;
   }
 
   .banner p {
