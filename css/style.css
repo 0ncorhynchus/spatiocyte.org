@@ -479,8 +479,9 @@ h4 .dash {
 
   .banner p {
     font-size: 10px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    padding: 0;
   }
 
   .banner .btn, .banner .popup-youtube {
