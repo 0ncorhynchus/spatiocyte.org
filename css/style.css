@@ -155,7 +155,6 @@ h4 .dash {
   float: left;
   width: 33%;
   padding: 155px 0 110px;
-  min-height: 350px;
   background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
@@ -443,9 +442,9 @@ h4 .dash {
   }
 
   .banner ul li {
-    padding-top: 100px;
+    padding-top: 130px;
     padding-bottom: 50px;
-    height: 100px;
+    max-height: 100px;
     background-size: 80% 80%;
   }
 
