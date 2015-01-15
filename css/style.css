@@ -428,34 +428,30 @@ h4 .dash {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 900px) {
 
-h4 {
-  left: 20px;
-  top: 0px;
-  margin-left: -17px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
-}
+  h4 {
+    left: 20px;
+    top: 0px;
+    margin-left: -17px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+  }
 
-h4 object {
-  width: 32px;
-  height: 32px;
-  top: 8px;
-}
+  h4 object {
+    width: 32px;
+    height: 32px;
+    top: 8px;
+  }
 
-h4 > a {
-  padding-left: 32px;
-  display: inline-block;
-  font-family: Arial, sans-serif;
-  font-size: 28px;
-  letter-spacing: -1px;
-  line-height: 48px;
-  text-decoration: none;
-}
+  h4 > a {
+    padding-left: 32px;
+    font-size: 28px;
+    letter-spacing: -1px;
+    line-height: 48px;
+  }
 
-h4 span {
-  /*color: #2f1b01;*/
-  font-size: 10px;
-  margin-top: -13px;
-}
+  h4 span {
+    font-size: 10px;
+    margin-top: -13px;
+  }
 
   .wrap {
     width: 90%;
@@ -476,7 +472,7 @@ h4 span {
   }
 
   .banner ul li {
-    padding-top: 130px;
+    padding-top: 50px;
     padding-bottom: 50px;
     height: 240px;
   }
