@@ -192,6 +192,8 @@ $ sh -x install-spatiocyte-ubuntu.sh
 $ curl -O https://raw.githubusercontent.com/ecell/spatiocyte/master/install-spatiocyte-mac.sh
 $ sh -x install-spatiocyte-mac.sh 
 </pre>
+
+
           <p>
             Enter your password when requested since some packages require the administrator privilege to install. If you have any issues during install, post the error messages to the 
             <a href="https://groups.google.com/forum/?hl=en#!forum/spatiocyte-users" target="_blank">
@@ -208,6 +210,45 @@ $ sh -x install-spatiocyte-mac.sh
             .
           </p>
         </li>
+
+
+<h5>
+  Windows:
+  </h5>
+    <ul>
+  <li>Install the latest release of the <a href="https://github.com/boot2docker/windows-installer/releases/latest">Docker for Windows Installer</a></li>
+  <li>INstall the latest release of the <a href="http://www.uvnc.com/">UltraVNC</a></li>
+  <li>Run <b>Boot2Docker Start</b> from your Desktop or <b>Program Files > Boot2Docker for Windows</b></li>
+  <li>Run following command
+    
+<pre>docker run -p 5901:5901 -it ecell/spatiocyte:latest /bin/bash</pre>
+    
+  </li>
+  <li>Now you are in Docker container, then run follwing command
+    
+<pre>vncserver :1 -geometry 1360x768 -depth 24
+
+You will require a password to access your desktops.
+
+Password: 
+Warning: password truncated to the length of 8.
+Verify:   
+Would you like to enter a view-only password (y/n)? n
+xauth:  file /root/.Xauthority does not exist
+
+New 'X' desktop is 45433a5fe4bc:1
+
+Creating default startup script /root/.vnc/xstartup
+Starting applications specified in /root/.vnc/xstartup
+Log file is /root/.vnc/45433a5fe4bc:1.log</pre>
+    
+  </li>
+  <li>
+    Connect Docker container 5901 port with UltraVNC. You can check the boot2docker virtual machine IP with <b>boot2docker ip</b>. In many cases, this IP is 192.168.59.103. Then connect 192.168.59.103:5901
+  </li>
+</ul>
+
+
         <li>
           <div>
             <h3>
