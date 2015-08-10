@@ -169,13 +169,14 @@
         Spatiocyte Quick Start
       </h2>
       <ol>
+
         <li>
           <div>
             <h3>
               Get and run the install script
             </h3>
             <p>
-              Spatiocyte runs on Ubuntu Linux and Mac OS X Yosemite systems. On a fresh Ubuntu or a Mac OS X system, Spatiocyte requires several additional packages to run. To install these packages and Spatiocyte, open a terminal and execute the following instructions:
+              Spatiocyte runs on Ubuntu Linux, Mac OS X Yosemite and Windows systems. On a fresh Ubuntu or a Mac OS X system, Spatiocyte requires several additional packages to run. To install these packages and Spatiocyte, open a terminal and execute the following instructions:
             </p>
           </div>
           <h5>
@@ -192,8 +193,6 @@ $ sh -x install-spatiocyte-ubuntu.sh
 $ curl -O https://raw.githubusercontent.com/ecell/spatiocyte/master/install-spatiocyte-mac.sh
 $ sh -x install-spatiocyte-mac.sh 
 </pre>
-
-
           <p>
             Enter your password when requested since some packages require the administrator privilege to install. If you have any issues during install, post the error messages to the 
             <a href="https://groups.google.com/forum/?hl=en#!forum/spatiocyte-users" target="_blank">
@@ -209,24 +208,24 @@ $ sh -x install-spatiocyte-mac.sh
             </a>
             .
           </p>
-        </li>
 
-
-<h5>
-  Windows (Docker container):
-  </h5>
-    <ul>
-  <li>Install the latest release of the <a href="https://github.com/boot2docker/windows-installer/releases/latest">Docker for Windows Installer</a></li>
-  <li>INstall the latest release of the <a href="http://www.uvnc.com/">UltraVNC</a></li>
-  <li>Run <b>Boot2Docker Start</b> from your Desktop or <b>Program Files > Boot2Docker for Windows</b></li>
-  <li>Run following command
-    
-<pre>docker run -p 5901:5901 -it ecell/spatiocyte:latest /bin/bash</pre>
-    
-  </li>
-  <li>Now you are in Docker container, then run follwing command
-    
-<pre>vncserver :1 -geometry 1360x768 -depth 24
+          <h5>
+            Windows (with Docker container):
+          </h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u2hqlvH-quk" frameborder="0" allowfullscreen></iframe>
+          <ol type="i">
+            <li>Install the latest release of <a href="https://github.com/boot2docker/windows-installer/releases/latest">Docker for Windows Installer</a> and <a href="http://www.uvnc.com/">UltraVNC</a>
+            </li>
+            <li>Run <b>Boot2Docker Start</b> from your Desktop or <b>Program Files > Boot2Docker for Windows</b>
+            </li>
+            <li>Issue the following command
+            <pre>
+docker run -p 5901:5901 -it ecell/spatiocyte:latest /bin/bash
+</pre>
+            </li>
+            <li>Now you are in Docker container, then run follwing command
+            <pre>
+vncserver :1 -geometry 1360x768 -depth 24
 
 You will require a password to access your desktops.
 
@@ -240,15 +239,15 @@ New 'X' desktop is 45433a5fe4bc:1
 
 Creating default startup script /root/.vnc/xstartup
 Starting applications specified in /root/.vnc/xstartup
-Log file is /root/.vnc/45433a5fe4bc:1.log</pre>
+Log file is /root/.vnc/45433a5fe4bc:1.log
+</pre>
     
-  </li>
-  <li>
-    Connect Docker container 5901 port with UltraVNC. You can check the boot2docker virtual machine IP with <b>boot2docker ip</b>. In many cases, this IP is 192.168.59.103. Then connect 192.168.59.103:5901
-  </li>
-</ul>
+            </li>
+            <li> Connect Docker container port 5901 with UltraVNC. You can check the boot2docker virtual machine IP with <b>boot2docker ip</b>. In most cases, the IP is 192.168.59.103. Finally, connect to 192.168.59.103:5901.
+            </li>
+          </ol>
+        </li>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u2hqlvH-quk" frameborder="0" allowfullscreen></iframe>
 
         <li>
           <div>
