@@ -319,7 +319,7 @@ $ spatiocyte
         <li>
           <div>
             <h3>
-              Setup the stepper and voxel radius
+              Specify the stepper and voxel radius
             </h3>
             <p>
               To build a simple 3D model, open a text editor and add the Python scripts as provided in the code boxes below. Each Spatiocyte model requires the SpatiocyteStepper. It advances the simulation in an event-driven manner. The radius of the hexagonal close-packed lattice voxels can be set in the SpatiocyteStepper using the VoxelRadius property. In the code below, we have set the radius to 4.4 nm.
@@ -345,7 +345,7 @@ theSimulator.rootSystem.StepperID = 'SS'
         <li>
           <div>
             <h3>
-              Setup compartment geometry
+              Define compartment geometry
             </h3>
             <p>
               We will use a cuboid compartment geometry for this model. The GEOMETRY variable of a volume compartment specifies one of the six supported geometric primitives: cuboid (‘0’), ellipsoid (‘1’), cylinder (‘2’), rod (‘3’), pyramid (‘4’) and erythrocyte (‘5’). More complex forms can be constructed using a combination of these primitives. Compartments without the GEOMETRY definition is set to the cuboid form since the default value is ‘0’.
